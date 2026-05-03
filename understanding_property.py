@@ -14,6 +14,11 @@ class User:
         print(f"Inside setter method for name property....")
         self._name = name
 
+    # deleter method name should be same as the property name
+    @name.deleter
+    def name(self):
+        self._name = None
+
 
 u = User("Harsh")
 
@@ -34,3 +39,5 @@ except AttributeError as error:
 # but If I want to try to remove that property I can not until defining the deleter method.
 
 del u.name
+
+print(u.name)
