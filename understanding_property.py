@@ -8,6 +8,12 @@ class User:
         print(f"Inside name property....")
         return self._name
 
+    # setter method name should be same as the property name
+    @name.setter
+    def name(self, name):
+        print(f"Inside setter method for name property....")
+        self._name = name
+
 
 u = User("Harsh")
 
@@ -19,5 +25,12 @@ try:
 
     u.name = "Swayam"
 
+    print(u.name)
+
 except AttributeError as error:
     print(f"Attribute Error Generated :: {error}")
+
+# now after defining the setter method for the property we can set the value of the property.
+# but If I want to try to remove that property I can not until defining the deleter method.
+
+del u.name
