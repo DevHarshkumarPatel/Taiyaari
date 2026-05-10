@@ -22,4 +22,15 @@ Now if we want that kind of function that will accept any number of arguments an
 
 """
 
+def new_addition(*args):
+    sum = 0
+    for num in args:
+        sum+=num
+    return sum
+
+add = new_addition(10,20)
+print(f"add :: {add}")
+add = new_addition(10,20,30,40,50,60)
+print(f"add :: {add}")
+
 
