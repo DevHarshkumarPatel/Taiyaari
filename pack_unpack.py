@@ -4,14 +4,7 @@ print(f"lst :: {lst}")
 
 print(f"*lst ::",*lst)
 
-def test(**data):
-    print(data)
+def test(**abc):
+    print(abc)
 
-
-kw = {
-
-    "name" : "Harsh",
-    "age" : 26
-}
-
-test(data = kw)
+test(abc = "kw")
