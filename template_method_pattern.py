@@ -7,7 +7,7 @@ class IndianBread(ABC):
         self.cook_on_tawa()
         self.serve()
 
-        print(f"Bread is Yummy!!\n")
+        print(f"{self.__class__.__name__} is Yummy!!\n")
 
 
     def roll_the_dough(self):
@@ -15,7 +15,7 @@ class IndianBread(ABC):
 
 
     def serve(self):
-        print(f"Serving the Bread with Pickle...")
+        print(f"Serving the {self.__class__.__name__} with Pickle...")
 
     @abstractmethod
     def prepare_dough(self):
